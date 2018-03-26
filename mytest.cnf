@@ -1,0 +1,36 @@
+[test1]
+host = 192.168.1.126
+port = 3306
+db_name = test
+user = root
+password = python123
+
+
+# 配置中没有写库的名字，这样更加灵活
+[notdbMysql]
+host = 192.168.1.101
+port = 3306
+user = root
+password = python123
+
+
+[test_analysis]
+host = 123.57.145.24
+port = 3306
+db_name = anadata
+user = analy
+password = Wp-123456
+
+# 日志路径
+[log]
+logpath = ''
+
+
+# 索引文件路径,注意要有
+[indexFilePath]
+filepath = /data/index
+
+
+# 验证tokenid和userid是否正确
+[isToken]
+before_url= http://192.168.1.141:57511/api/Login/ExistsLogin
