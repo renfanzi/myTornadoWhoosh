@@ -24,15 +24,15 @@ def retsearch(results):
     '''
     for i in results:
         if "PSerialNumber" in i:
-            if int(i["ProjectStatus"]) == 1:
-                if int(i["ProjectPublic"]) == 2:
+            if str(i["ProjectStatus"]) == '1':
+                if str(i["ProjectPublic"]) == '2':
                     projectList.append(i)
         if "QSerialNumber" in i:
-            if int(i["QuesStatus"]) == 1:
-                if int(i["QuesPublic"]) == 2:
+            if str(i["QuesStatus"]) == '1':
+                if str(i["QuesPublic"]) == '2':
                     questList.append(i)
         if "VSerialNumber" in i:
-            if int(i["VarStatus"]) == 1:
+            if str(i["VarStatus"]) == '1':
                 variableList.append(i)
     '''
         根据不同serial number 得到不同的variableid list
